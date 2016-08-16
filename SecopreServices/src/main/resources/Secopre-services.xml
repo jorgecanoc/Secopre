@@ -24,11 +24,11 @@ http://www.springframework.org/schema/jee/spring-jee.xsd">
 	<!-- holding properties for database connectivity / -->
 	<context:property-placeholder location="classpath:jdbc.properties" />
 
-	<!-- data source definition -->
-	<jee:jndi-lookup id="dataSource" jndi-name="jdbc/dssecopre"/> 
+	<!-- data source definition   jdbc/dssecopre <jta-data-source>java:comp/env/jdbc/ExampleDS</jta-data-source>-->
+	<jee:jndi-lookup id="dataSource" jndi-name="jdbc/ExampleDS"/> 
 
-	<!-- fuente de datos historico -->	
-	<jee:jndi-lookup id="tsadbitntstDataSource" jndi-name="jdbc/dstsadbitntst"/> 
+	<!-- fuente de datos historico jdbc/dstsadbitntst-->	
+	<jee:jndi-lookup id="tsadbitntstDataSource" jndi-name="jdbc/ExampleDS"/> 
 	
 	<!-- data source definition -->
 <!-- 	<bean id="dataSource" -->
